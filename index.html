@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPIT 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="css-0">
+        <header class="css-1u1pfup">
+            <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="css-1tcm786" viewBox="0 0 38 57" aria-label="Homepage">
+                    <path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"></path>
+                    <path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"></path>
+                    <path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"></path>
+                    <path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"></path>
+                    <path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"></path>
+                </svg>
+            </a>
+            <nav aria-label="Primary navigation">
+                <ul class="css-e1rr4p">
+                    <li>
+                        <div class="css-1fku8ip">
+                            <button class="dropdown-label css-1vb2z9d" aria-expanded="false" aria-controls="dropdown-:R24qjabddkp9mja:">
+                                Products
+                                <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                    <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content css-tprnf" id="dropdown-:R24qjabddkp9mja:">
+                                <ul class="css-w1vhwa">
+                                    <li class="css-zhimz">
+                                        <a class="css-u6qn92" href="/design-overview/">
+                                            <span>Figma</span>
+                                            <p>An all-in-one design platform</p>
+                                            <img class="css-p20wo7" alt="" src="https://cdn.sanity.io/images/599r6htc/localized/3e7c45b33de8d6a1ff1bf9952c4b1c423f079f88-240x120.svg?q=75&amp;fit=max&amp;auto=format"/>
+                                        </a>
+                                        <ul class="css-1soswtm">
+                                            <li>
+                                                <a class="css-nb9w5v" href="/design/">
+                                                    <span>Design</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/prototyping/">
+                                                    <span>Prototyping</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/design-systems/">
+                                                    <span>Design systems</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/dev-mode/">
+                                                    <span>Development</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/downloads/">
+                                                    <span>Downloads</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="css-zhimz">
+                                        <a class="css-u6qn92" href="/figjam/">
+                                            <span>FigJam</span>
+                                            <p>An online whiteboard for teams</p>
+                                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAACrUlEQVQokU3Mu28TBwDA4fsTYIIOFSxIVOrQigEkulVMDNAOVaV2QLSwFKGqS6OIh0qrQpBKhQVBkPCSSEGEkpcEQSQOxk4d2zl8ucT22WfnfA/fnc+PuyYiCfHjVwkYOnzrJ9yTwgwtTPNQjhBV8lTKawQm+Eb3f9oElQaBs0jgvCKoWDSKm1SlLnayjZ1s4aY71BUQjr7s5btoDydivzCYHkPV6vg2NF3wq+C7EFTb+F4GU7/McvEcNWMKT16lMLaOeMcjdcsl9/cKdqKD8Pnzrzkw9RWHwkfoS90kW3apN7pYtXXy5RqyYqFoFSwvRql8CkX5AVcfpZJqkrrpEe4rMX2hROKGg/7iDcLh8HG+mDnGN5GTXBaHUEwP128RSS9y8co1fuo9Q18oxExiHKs6gmcP0zRlrMQKiQGH5+dVps4XSVx/H14VH9E/P8yAOMazpVfo1irZksuF0FX27N3Htu0fsHf/Z1wZHEC3TP71Anz9Nfb8JtJfdcJ/qkRCGksPAux/OgilbMDSXBUpYlMSV3DLm8zE0nx79Hu2bN2KIAjs2v0RF0PXKJQaeEaLqrqBNh+w8MQm+bhM5mkNa65FPQuCLW4SvV1gpC+OOGzh5FskJZWfz57j408+5cMdOzl4+EvujUyQU11yUoW86LAY15iPLbEg5tDyDjVtA1/vIhhza4xfStL/42PCA1mcXAvTW+NZLMnvl0L0nP2VP/pvMBUXkbMmqajCYlwnv1AmkZlmMn+X2eUJLMMkMDsIVblNetTmxe0cmckaXrFDo97FdF6jqFUkuczLWZnZRAZZMshLDlZuBVvzmF1+yKBykkfqbxQN+V3Y1LrUlA5epk290KGpd/GtLn7lHUtdRZpbJh0vomUa1LQ3BAZ4ZoOoNkS/coz7hdOoRvpt+B/qE5heKvu7bgAAAABJRU5ErkJggg==" alt="" class="css-p20wo7" data-lqip="true"/>
+                                            <img data-loading="true" class="css-z6gkcy" loading="lazy" alt="" src="https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;h=120&amp;q=75&amp;fit=max&amp;auto=format" srcSet="https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;q=75&amp;fit=max&amp;auto=format&amp;dpr=0.5 120w, https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;q=75&amp;fit=max&amp;auto=format&amp;dpr=0.75 180w, https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;q=75&amp;fit=max&amp;auto=format 240w, https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;q=75&amp;fit=max&amp;auto=format&amp;dpr=1.5 360w, https://cdn.sanity.io/images/599r6htc/localized/2cd12cf136c014ec23ef42647e0e4ee2818a6b53-480x240.png?w=240&amp;q=75&amp;fit=max&amp;auto=format&amp;dpr=2 480w"/>
+                                        </a>
+                                        <ul class="css-1soswtm">
+                                            <li>
+                                                <a class="css-nb9w5v" href="/figjam/online-whiteboard/">
+                                                    <span>Online whiteboarding</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/figjam/strategic-planning/">
+                                                    <span>Strategic planning</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/figjam/team-meetings/">
+                                                    <span>Team meetings</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/figjam/diagramming-tool/">
+                                                    <span>Diagramming</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="css-1f14amt">
+                            <button class="dropdown-label css-1vb2z9d" aria-expanded="false" aria-controls="dropdown-:R28qjabddkp9mja:">
+                                Enterprise
+                                <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                    <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content css-sqlvp2" id="dropdown-:R28qjabddkp9mja:">
+                                <ul class="css-17mrx6g">
+                                    <li>
+                                        <a class="css-nb9w5v" href="/enterprise/">
+                                            <span>Overview</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/contact/">
+                                            <span>Contact sales</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="css-1sko16" href="/pricing/">Pricing</a>
+                    </li>
+                    <li>
+                        <div class="css-1f14amt">
+                            <button class="dropdown-label css-1vb2z9d" aria-expanded="false" aria-controls="dropdown-:R2gqjabddkp9mja:">
+                                Resources
+                                <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                    <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content css-sqlvp2" id="dropdown-:R2gqjabddkp9mja:">
+                                <ul class="css-17mrx6g">
+                                    <li>
+                                        <a class="css-nb9w5v" href="/blog/">
+                                            <span>Blog</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/templates/">
+                                            <span>Templates</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/customers/">
+                                            <span>Customers</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/partners/">
+                                            <span>Partners</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/community/plugins" target="_blank" rel="noreferrer" class="css-nb9w5v">
+                                            <span>Plugins and widgets</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/best-practices/">
+                                            <span>Best practices</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/resource-library/">
+                                            <span>Resource library</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/reports/">
+                                            <span>Reports &amp;Insights</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="css-nb9w5v" href="/webinars/">
+                                            <span>Webinars</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://help.figma.com/hc/en-us" target="_blank" rel="noreferrer" class="css-nb9w5v">
+                                            <span>Help center</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="css-1fku8ip">
+                            <button class="dropdown-label css-1vb2z9d" aria-expanded="false" aria-controls="dropdown-:R2kqjabddkp9mja:">
+                                Community
+                                <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                    <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                </svg>
+                            </button>
+                            <div class="dropdown-content css-tprnf" id="dropdown-:R2kqjabddkp9mja:">
+                                <ul class="css-w1vhwa">
+                                    <li class="css-oyiaa3">
+                                        <a href="/community/" target="_blank" rel="noreferrer" class="css-u6qn92">
+                                            <span>Community resources</span>
+                                            <p>Free expertly crafted files you can duplicate, remix, and use</p>
+                                            <img class="css-p20wo7" alt="" src="https://cdn.sanity.io/images/599r6htc/localized/c26f4735dcfe8661c138da8e281ea9da5d71c814-248x160.svg?q=75&amp;fit=max&amp;auto=format"/>
+                                        </a>
+                                    </li>
+                                    <li class="css-1at2mga">
+                                        <ul class="css-1460iw6">
+                                            <li>
+                                                <a class="css-nb9w5v" href="/events/">
+                                                    <span>Events and livestreams</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/education/">
+                                                    <span>Education program</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://friends.figma.com/" target="_blank" rel="noreferrer" class="css-nb9w5v">
+                                                    <span>User groups</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="css-nb9w5v" href="/community-creators/">
+                                                    <span>Community creators</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="css-642luu" href="/contact/">Contact sales</a>
+                    </li>
+                    <li>
+                        <a href="/login?locale=en" target="_blank" rel="noreferrer" class="css-1hbziev">Log in</a>
+                    </li>
+                    <li>
+                        <a href="/signup?locale=en" target="_blank" rel="noreferrer" behavior="signup" location="navigation" class="css-15x8ww1">Get started for free</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="/signup?locale=en" target="_blank" rel="noreferrer" tabindex="-1" aria-hidden="true" behavior="signup" location="navigation" class="css-favnz8">Get started for free</a>
+        </header>
+        <header class="css-1bag5iv">
+            <div class="css-a2b1i5">
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="css-1ty7gog" viewBox="0 0 38 57" aria-label="Homepage">
+                        <path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"></path>
+                        <path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"></path>
+                        <path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"></path>
+                        <path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"></path>
+                        <path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"></path>
+                    </svg>
+                </a>
+                <div class="css-70qvj9">
+                    <a href="/signup?locale=en" target="_blank" rel="noreferrer" behavior="signup" location="navigation" class="css-15x8ww1">Get started for free</a>
+                    <nav aria-label="Primary navigation" class="css-jodbou">
+                        <button aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation-:R5abddkp9mja:" class="css-1mgi8e0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" class="css-c98hde">
+                                <path fill="currentColor" d="M2 3h20v3H2zm0 8h20v3H2zm0 8h20v3H2z"></path>
+                            </svg>
+                        </button>
+                        <div id="navigation-:R5abddkp9mja:" hidden="">
+                            <div class="css-1yqt3w6"></div>
+                            <div class="css-trpfoa">
+                                <div class="css-g2ctq">
+                                    <a href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="css-1ty7gog" viewBox="0 0 38 57" aria-label="Homepage">
+                                            <path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"></path>
+                                            <path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"></path>
+                                            <path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"></path>
+                                            <path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"></path>
+                                            <path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"></path>
+                                        </svg>
+                                    </a>
+                                    <button aria-label="Close navigation menu" class="css-199zda">
+                                        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill="currentColor" d="M4 18L18 4l2 2L6 20z"></path>
+                                            <path fill="currentColor" d="M6 4l14 14-2 2L4 6z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <nav class="css-164r41r">
+                                    <ul class="css-1btwqcf">
+                                        <li>
+                                            <div class="css-bkrt6n">
+                                                <button class="dropdown-label css-xx8m7p" aria-expanded="false" aria-controls="dropdown-:R2dalaldabddkp9mja:">
+                                                    Products
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                                        <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-content css-1xjb4t0" id="dropdown-:R2dalaldabddkp9mja:">
+                                                    <ul class="css-17mrx6g">
+                                                        <li>
+                                                            <a class="css-nmajw1" href="/design-overview/">
+                                                                <span>Figma</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/design/">
+                                                                <span>Design</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/prototyping/">
+                                                                <span>Prototyping</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/design-systems/">
+                                                                <span>Design systems</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/dev-mode/">
+                                                                <span>Development</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/downloads/">
+                                                                <span>Downloads</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-nmajw1" href="/figjam/">
+                                                                <span>FigJam</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/figjam/online-whiteboard/">
+                                                                <span>Online whiteboarding</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/figjam/strategic-planning/">
+                                                                <span>Strategic planning</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/figjam/team-meetings/">
+                                                                <span>Team meetings</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/figjam/diagramming-tool/">
+                                                                <span>Diagramming</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="css-bkrt6n">
+                                                <button class="dropdown-label css-xx8m7p" aria-expanded="false" aria-controls="dropdown-:R4dalaldabddkp9mja:">
+                                                    Enterprise
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                                        <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-content css-1xjb4t0" id="dropdown-:R4dalaldabddkp9mja:">
+                                                    <ul class="css-17mrx6g">
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/enterprise/">
+                                                                <span>Overview</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/contact/">
+                                                                <span>Contact sales</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="css-1q8dusa" href="/pricing/">Pricing</a>
+                                        </li>
+                                        <li>
+                                            <div class="css-bkrt6n">
+                                                <button class="dropdown-label css-xx8m7p" aria-expanded="false" aria-controls="dropdown-:R8dalaldabddkp9mja:">
+                                                    Resources
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                                        <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-content css-1xjb4t0" id="dropdown-:R8dalaldabddkp9mja:">
+                                                    <ul class="css-17mrx6g">
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/blog/">
+                                                                <span>Blog</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/templates/">
+                                                                <span>Templates</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/customers/">
+                                                                <span>Customers</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/partners/">
+                                                                <span>Partners</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="/community/plugins" target="_blank" rel="noreferrer" class="css-1sx75i7">
+                                                                <span>Plugins and widgets</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/best-practices/">
+                                                                <span>Best practices</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/resource-library/">
+                                                                <span>Resource library</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/reports/">
+                                                                <span>Reports &amp;Insights</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/webinars/">
+                                                                <span>Webinars</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://help.figma.com/hc/en-us" target="_blank" rel="noreferrer" class="css-1sx75i7">
+                                                                <span>Help center</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="css-bkrt6n">
+                                                <button class="dropdown-label css-xx8m7p" aria-expanded="false" aria-controls="dropdown-:Radalaldabddkp9mja:">
+                                                    Community
+                                                    <svg width="8" height="6" viewBox="0 0 8 6" class="css-1vkg3ei">
+                                                        <path d="M4 6L0.535898 0L7.4641 0L4 6Z" fill="currentColor"></path>
+                                                    </svg>
+                                                </button>
+                                                <div class="dropdown-content css-1xjb4t0" id="dropdown-:Radalaldabddkp9mja:">
+                                                    <ul class="css-17mrx6g">
+                                                        <li>
+                                                            <a href="/community/" target="_blank" rel="noreferrer" class="css-nmajw1">
+                                                                <span>Community resources</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/events/">
+                                                                <span>Events and livestreams</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/education/">
+                                                                <span>Education program</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://friends.figma.com/" target="_blank" rel="noreferrer" class="css-1sx75i7">
+                                                                <span>User groups</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="css-1sx75i7" href="/community-creators/">
+                                                                <span>Community creators</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a class="css-1vt4yuc" href="/contact/">Contact sales</a>
+                                        </li>
+                                        <li>
+                                            <a href="/login?locale=en" target="_blank" rel="noreferrer" class="css-1q8dusa">Log in</a>
+                                        </li>
+                                        <li>
+                                            <a href="/signup?locale=en" target="_blank" rel="noreferrer" behavior="signup" location="navigation" class="css-ttvm4q">Get started for free</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main id="main" tabindex="-1">
+        <section class="css-yj7nmt">
+            <div class="css-rhpgco">
+                <div class="css-avehtb">
+                    <div class="css-b8n9y9">
+                        <h1 aria-label="How you design, align, and build matters. Do it together with Figma." class="css-s855ri">
+                            <span>How you </span>
+                            <strong>
+                                <span class="css-epvm6" style="color:#000000">
+                                    design 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="46" fill="none" viewBox="0 0 44 46" class="css-1xvso8j">
+                                        <path stroke="currentColor" stroke-width="4" d="m3.88 4 22.03 7.49a13.12 13.12 0 0 1 8.36 17.12l5.82 6.43-8.84 8-5.78-6.38A13.11 13.11 0 0 1 9.02 26.02L3.88 4Zm0 0 18.05 19.95"></path>
+                                        <path fill="currentColor" d="M24.12 26.72a3.58 3.58 0 1 1-4.8-5.3 3.58 3.58 0 0 1 4.8 5.3Z"></path>
+                                    </svg>
+                                    ,
+                                </span>
+                            </strong>
+                            <span></span>
+                            <strong>
+                                <span class="css-epvm6" style="color:#000000">
+                                    align 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="50" fill="none" viewBox="0 0 36 50" class="css-x2h7g6">
+                                        <path fill="currentColor" stroke="currentColor" stroke-linejoin="round" d="M30.95 33.17a1.54 1.54 0 0 0-.25-.63.9.9 0 0 0-.36-.3c-.13-.05-.28-.06-.4-.05-.25.02-.5.12-.74.22-.52.22-1.14.38-1.71.4-1.15.05-2.28.08-3.42.1l-2.86.08c-.72.04-2.48-.02-2.78.63-.17.38.63.83 1.17.93.76.14 4.56.24 6.56.26l1.2-.04c-.69.7-5.56 4.66-7.56 6.02a11 11 0 0 1-5.72 1.72c-3.12.15-5.88-2.12-6.16-5.04-.2-1.9.18-3.74.78-5.6l1.06.11.6.06c.58.05 1.14.09 1.7.06 2.59-.13 5.3-1.5 7.45-3.47 2.15-1.96 3.77-4.53 4.15-7.08.2-1.28 0-2.3-.6-3-.62-.7-1.62-1-2.92-.96-3.34.1-6.17 1.37-8.25 3.97a46.87 46.87 0 0 0-2.54 3.62l-1.02 1.54c-.2.28-.37.58-.58.91l-.15.25a4.51 4.51 0 0 1-.8-3.4c.28-1.83.61-3.7 1.29-5.4 1.97-4.99 5.03-9.25 9.25-12.66a115.8 115.8 0 0 0 3.33-2.63c.53-.44 1.01-.95 1.45-1.48a.4.4 0 0 0 .1-.23c.02-.08.03-.17.03-.25a.87.87 0 0 0-.13-.48.88.88 0 0 0-.4-.28 1.14 1.14 0 0 0-.47-.07 2.3 2.3 0 0 0-.94.43l-1.3.9c-1.2.84-2.4 1.67-3.55 2.6a32.04 32.04 0 0 0-10.21 14.5 18.3 18.3 0 0 0-.9 3.68c-.36 2.48-.1 4.91 1.7 6.92.17.2.25.39.28.56.02.18 0 .39-.07.66l-.2.8c-.32 1.3-.65 2.63-.75 3.97-.46 5.58 4.02 9.77 9.6 9.12 2.7-.32 5.18-1.24 7.36-2.85.26-.18.75-.57 1.3-1.03l.22-.18 2.01-1.72.22-.18c.2-.16.38-.33.63-.56l.06-.05-.12.55-.62 2.26c-.51 1.86-1.02 3.71-1.5 5.58l-.1.28-.04.13c-.04.15-.09.3-.1.48-.06.35 0 .71.3 1.08a.2.2 0 0 0 .2.06c.5-.08.81-.33 1.03-.63.19-.27.3-.58.4-.85 0-.04.02-.07.03-.1 1.6-4.5 3.2-9.03 4.76-13.57.06-.2.04-.45 0-.67Zm-15.5-11.82a8.06 8.06 0 0 1 4.86-1.59c.57-.03.89.08 1.05.25.15.16.21.45.08.98-.25 1.09-.6 2.2-1.18 3.11a13.09 13.09 0 0 1-5.18 4.7 7.45 7.45 0 0 1-5.36.55c1.59-3.09 3.1-5.93 5.73-8Z"></path>
+                                    </svg>
+                                    ,
+                                </span>
+                            </strong>
+                            <span>and </span>
+                            <strong>
+                                <span class="css-epvm6" style="color:#000000">
+                                    build 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" fill="none" viewBox="0 0 47 47" class="css-ssgmig">
+                                        <path fill="currentColor" fill-rule="evenodd" d="M23.5 42.36a18.86 18.86 0 1 0 0-37.72 18.86 18.86 0 0 0 0 37.72Zm0 3.64a22.5 22.5 0 1 0 0-45 22.5 22.5 0 0 0 0 45Z" clip-rule="evenodd"></path>
+                                        <path fill="currentColor" fill-rule="evenodd" d="m12.64 29.86-4.23-5.09-1.07-1.28 1.07-1.28 4.23-5.08h5.21l-5.3 6.36 5.3 6.37h-5.2Zm6.33 0 5.09-12.73h4.3l-5.09 12.73h-4.3Zm15.38 0h-5.21l5.3-6.37-5.3-6.36h5.2l4.24 5.08 1.07 1.28-1.07 1.28-4.23 5.09Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </span>
+                            </strong>
+                            <span>matters. Do it together with Figma.</span>
+                        </h1>
+                    </div>
+                    <div class="css-dcez4h">
+                        <a href="/signup?locale=en" target="_blank" rel="noreferrer" location="homepage_hero" behavior="signup" class="css-1birkxv">Get started</a>
+                    </div>
+                </div>
+                    <div class="photo-container">
+                        <div class="img-container">
+                            <img src="assets/image.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="css-znuur3">
+            <div class="css-gqjykr">
+                <div class="css-7fl06r">
+                    <p>
+                        <strong>Trusted by teams at</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="css-k008qs">
+                <div class="css-1028ru8">
+                    <img width="71" height="22" alt="AirBnb Logo" src="https://cdn.sanity.io/images/599r6htc/localized/ab05e1a185076f6612ad3c373d95735362135a74-71x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="91" height="18" alt="Asana Logo" src="https://cdn.sanity.io/images/599r6htc/localized/10030cd64a680afb8e98dee4483db66d26ef09d1-91x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="146" height="18" alt="Atlassian Logo" src="https://cdn.sanity.io/images/599r6htc/localized/32866b28878c23cdd203b5f4f69cc9102381e174-146x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="137" height="18" alt="Basic/Dept. Logo" src="https://cdn.sanity.io/images/599r6htc/localized/d54af886ed8659bc278aef9cb6cfb61d8b5a6c9c-137x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="133" height="18" alt="Braintree Logo" src="https://cdn.sanity.io/images/599r6htc/localized/962518cdf66a8669ac335378ad252c16bb4ae581-133x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="102" height="18" alt="Coinbase Logo" src="https://cdn.sanity.io/images/599r6htc/localized/4403c512ee8bbb39347dccad8ef0d210e9e1ee29-102x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="75" height="18" alt="Dribbble Logo" src="https://cdn.sanity.io/images/599r6htc/localized/d321952702fd743899505cd5dfeb6397a7c7bc5a-75x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="92" height="18" alt="Dropbox Logo" src="https://cdn.sanity.io/images/599r6htc/localized/ec94fd9f63d827b106e78931b08b134faa3173be-92x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="67" height="18" alt="GitHub Logo" src="https://cdn.sanity.io/images/599r6htc/localized/e68a8936a4abb0cf2323e4550fad6b981c0b328e-67x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="90" height="22" alt="Herman Miller Logo" src="https://cdn.sanity.io/images/599r6htc/localized/0d9aa9b05e89ce780ff78ee4a75fee2c96744292-90x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="86" height="18" alt="Microsoft Logo" src="https://cdn.sanity.io/images/599r6htc/localized/74f4885f989edc568725e08b1b1a8666cd0c10bd-86x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="153" height="20" alt="The New York Times Logo" src="https://cdn.sanity.io/images/599r6htc/localized/5f1bbb4673a229cb85b6b157ef980e568a39d68a-153x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="146" height="18" alt="One Medical Logo" src="https://cdn.sanity.io/images/599r6htc/localized/16569e9ce1735e67798fbcdb815e0c632dec1281-146x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="68" height="20" alt="Rakuten Logo" src="https://cdn.sanity.io/images/599r6htc/localized/b1e6ceb3921861777f753c03cb24c48dd161f5ed-68x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="79" height="20" alt="Slack Logo" src="https://cdn.sanity.io/images/599r6htc/localized/84ae3c1b89f2e32d3fed6298e79b5c60a69b99c9-79x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="107" height="22" alt="Walgreens Logo" src="https://cdn.sanity.io/images/599r6htc/localized/57ce475b4f76d5867edf3d57a54e23cad5984f0c-107x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img width="81" height="18" alt="Zoom Logo" src="https://cdn.sanity.io/images/599r6htc/localized/e028bf69d1a66c7f6ed75cc909f3e2d62869eed1-81x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                </div>
+                <div class="css-1028ru8">
+                    <img aria-hidden="true" width="71" height="22" alt="AirBnb Logo" src="https://cdn.sanity.io/images/599r6htc/localized/ab05e1a185076f6612ad3c373d95735362135a74-71x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="91" height="18" alt="Asana Logo" src="https://cdn.sanity.io/images/599r6htc/localized/10030cd64a680afb8e98dee4483db66d26ef09d1-91x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="146" height="18" alt="Atlassian Logo" src="https://cdn.sanity.io/images/599r6htc/localized/32866b28878c23cdd203b5f4f69cc9102381e174-146x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="137" height="18" alt="Basic/Dept. Logo" src="https://cdn.sanity.io/images/599r6htc/localized/d54af886ed8659bc278aef9cb6cfb61d8b5a6c9c-137x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="133" height="18" alt="Braintree Logo" src="https://cdn.sanity.io/images/599r6htc/localized/962518cdf66a8669ac335378ad252c16bb4ae581-133x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="102" height="18" alt="Coinbase Logo" src="https://cdn.sanity.io/images/599r6htc/localized/4403c512ee8bbb39347dccad8ef0d210e9e1ee29-102x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="75" height="18" alt="Dribbble Logo" src="https://cdn.sanity.io/images/599r6htc/localized/d321952702fd743899505cd5dfeb6397a7c7bc5a-75x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="92" height="18" alt="Dropbox Logo" src="https://cdn.sanity.io/images/599r6htc/localized/ec94fd9f63d827b106e78931b08b134faa3173be-92x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="67" height="18" alt="GitHub Logo" src="https://cdn.sanity.io/images/599r6htc/localized/e68a8936a4abb0cf2323e4550fad6b981c0b328e-67x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="90" height="22" alt="Herman Miller Logo" src="https://cdn.sanity.io/images/599r6htc/localized/0d9aa9b05e89ce780ff78ee4a75fee2c96744292-90x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="86" height="18" alt="Microsoft Logo" src="https://cdn.sanity.io/images/599r6htc/localized/74f4885f989edc568725e08b1b1a8666cd0c10bd-86x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="153" height="20" alt="The New York Times Logo" src="https://cdn.sanity.io/images/599r6htc/localized/5f1bbb4673a229cb85b6b157ef980e568a39d68a-153x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="146" height="18" alt="One Medical Logo" src="https://cdn.sanity.io/images/599r6htc/localized/16569e9ce1735e67798fbcdb815e0c632dec1281-146x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="68" height="20" alt="Rakuten Logo" src="https://cdn.sanity.io/images/599r6htc/localized/b1e6ceb3921861777f753c03cb24c48dd161f5ed-68x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="79" height="20" alt="Slack Logo" src="https://cdn.sanity.io/images/599r6htc/localized/84ae3c1b89f2e32d3fed6298e79b5c60a69b99c9-79x20.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="107" height="22" alt="Walgreens Logo" src="https://cdn.sanity.io/images/599r6htc/localized/57ce475b4f76d5867edf3d57a54e23cad5984f0c-107x22.svg?q=75&amp;fit=max&amp;auto=format"/>
+                    <img aria-hidden="true" width="81" height="18" alt="Zoom Logo" src="https://cdn.sanity.io/images/599r6htc/localized/e028bf69d1a66c7f6ed75cc909f3e2d62869eed1-81x18.svg?q=75&amp;fit=max&amp;auto=format"/>
+                </div>
+            </div>
+        </section>
+        <div class="scroll-container">
+            <section class="css-17wxmyz" class="section yellow">
+                <div class="css-4n32kg">
+                    <div class="css-1w0icqx">
+                        <div class="css-1jfwkxe">
+                            <p class="css-1b7y4wq">Design</p>
+                        </div>
+                        <h2 class="css-1em3ndj">Co-create in one space</h2>
+                    </div>
+                    <div class="css-el77m7">
+                        <div class="css-10ghxob">
+                            <p>Work together in real time and empower designers to create in new ways. Keep workflows efficient with tools that give every team visibility throughout the process.</p>
+                        </div>
+                        <a class="css-13u7m8z" href="/design/">Explore design</a>
+                    </div>
+                            <div class="image-container">
+                                <div class="img-container">
+                                   <img src="assets/image 2.png" alt=""> 
+                                </div>
+                            </div>
+                </div>
+            </section>
+            <section class="css-17wxmyz">
+                <div class="css-1iwzbfk">
+                    <div class="css-1w0icqx">
+                        <div class="css-1jfwkxe">
+                            <p class="css-1b7y4wq">Prototype</p>
+                        </div>
+                        <h2 class="css-1em3ndj">Make designs feel real</h2>
+                    </div>
+                    <div class="css-bh39hc">
+                        <div class="css-10ghxob">
+                            <p>Create realistic prototypes that allow for quick iteration on flows and states. Test the full, interactive experience to get better feedback, sooner.</p>
+                        </div>
+                        <a class="css-13u7m8z">Explore prototyping</a>
+                    </div>
+                    <div class="image-container">
+                        <div class="img-container">
+                            <img src="assets/image 3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="css-17wxmyz">
+                <div class="css-4n32kg">
+                    <div class="css-1w0icqx">
+                        <div class="css-1jfwkxe">
+                            <p class="css-1b7y4wq">Dev Mode</p>
+                            <div class="css-5umvbj">
+                                <span>New</span>
+                            </div>
+                        </div>
+                        <h2 class="css-1em3ndj">Bring design and dev closer</h2>
+                    </div>
+                    <div class="css-el77m7">
+                        <div class="css-10ghxob">
+                            <p>Introducing Dev Mode, a new space in Figma for developers. Bring clarity to designs and give developers the tools they need to translate them into code.</p>
+                        </div>
+                        <a class="css-13u7m8z" href="/dev-mode/">Explore Dev Mode</a>
+                    </div>
+                    <div class="image-container">
+                        <div class="img-container">
+                            <img src="assets/image 4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="css-17wxmyz">
+                <div class="css-1iwzbfk">
+                    <div class="css-1w0icqx">
+                        <div class="css-1jfwkxe">
+                            <p class="css-1b7y4wq">Design systems</p>
+                        </div>
+                        <h2 class="css-1em3ndj">Scale design and development</h2>
+                    </div>
+                    <div class="css-bh39hc">
+                        <div class="css-10ghxob">
+                            <p>Save time and keep things consistent with reusable assets in shared libraries. Standardize components and variables so that there’s more time for exploration, and less time doing busy work.</p>
+                        </div>
+                        <a class="css-13u7m8z" href="/design-systems/">Explore design systems</a>
+                    </div>
+                    <div class="image-container">
+                        <div class="img-container">
+                            <img src="assets/image 5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="css-17wxmyz">
+                <div class="css-4n32kg">
+                    <div class="css-1w0icqx">
+                        <div class="css-1jfwkxe">
+                            <p class="css-1b7y4wq">FigJam</p>
+                        </div>
+                        <h2 class="css-1em3ndj">Align your team</h2>
+                    </div>
+                    <div class="css-el77m7">
+                        <div class="css-10ghxob">
+                            <p>FigJam is an online whiteboard where everyone who builds products can collaborate. Use it to bring your team together in new ways, from kickoffs and stand ups to rituals and retros.</p>
+                        </div>
+                        <a class="css-13u7m8z" href="/figjam/">Explore FigJam</a>
+                    </div>
+                    <div class="image-container">
+                        <div class="img-container">
+                            <img src="assets/image 6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="css-1jcad7p">
+        <footer class="css-1i3a4rb">
+            <div class="css-16ez62l">
+                <a aria-label="Homepage" class="css-w642sw" href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="73" height="26" class="css-r4ad6" aria-hidden="true">
+                        <path d="M.52 0v20.16l2.6.01v-9.6h6.25V8.03H3.11v-5.5h8.15V0H.52zm15.4 4.1a1.7 1.7 0 1 0 0-3.4 1.7 1.7 0 0 0 0 3.4zm-1.31 2.53v13.54h2.6V6.63h-2.6z"></path>
+                        <path fill-rule="evenodd" d="M26.82 6.24c-3.44 0-5.84 2.91-5.84 6.37s2.4 6.37 5.84 6.37c1.58 0 2.88-.6 3.83-1.6v1.8a4.07 4.07 0 0 1-4.06 4.12c-.83 0-1.65-.32-2.3-.78l-1.3 2.25a6.65 6.65 0 0 0 10.26-5.6V6.64h-2.6v1.21c-.95-1-2.25-1.6-3.83-1.6zm-3.25 6.37c0-2.15 1.64-3.84 3.54-3.84 1.9 0 3.53 1.7 3.53 3.84 0 2.15-1.64 3.83-3.53 3.83-1.9 0-3.54-1.68-3.54-3.83z"></path>
+                        <path d="M42.59 8.77a2.83 2.83 0 0 0-2.78 2.84v8.56h-2.6V6.63h2.6v1.24a4.1 4.1 0 0 1 3.34-1.63c1.82 0 3.22.9 4.02 2.28a4.98 4.98 0 0 1 4.13-2.28c2.95 0 4.8 2.38 4.8 5.33v8.6h-2.58V11.6a2.83 2.83 0 0 0-2.78-2.84 2.83 2.83 0 0 0-2.78 2.84v8.56h-2.6V11.6a2.83 2.83 0 0 0-2.77-2.84z"></path>
+                        <path fill-rule="evenodd" d="M69.93 8.17a6.27 6.27 0 0 0-4.57-1.93c-3.86 0-6.6 3.26-6.6 7.16 0 3.9 2.74 7.16 6.6 7.16a6.3 6.3 0 0 0 4.57-1.93v1.54h2.59V6.63h-2.6v1.54zm-8.58 5.23c0-2.58 1.98-4.63 4.29-4.63 2.3 0 4.29 2.05 4.29 4.63s-1.98 4.62-4.29 4.62c-2.3 0-4.29-2.04-4.29-4.62z"></path>
+                    </svg>
+                </a>
+                <ul class="css-70ye26">
+                    <li class="css-1tu59u4">
+                        <a href="https://twitter.com/figma" target="_blank" rel="noopener noreferrer" class="css-ap1zbb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16" aria-hidden="true" class="css-1chiy0g">
+                                <g clip-path="url(#a)">
+                                    <path d="M9.47 6.77 15.3 0h-1.4L8.85 5.88 4.81 0H.15l6.11 8.9L.15 16h1.38l5.35-6.21L11.14 16h4.67L9.47 6.77Zm-1.9 2.2-.61-.88-4.93-7.05h2.12l3.98 5.69.62.88 5.17 7.4h-2.13L7.58 8.97Z"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="a">
+                                        <path fill="#fff" d="M0 0h16v16H0z"></path>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <span class="css-1vd5jp7">X</span>
+                        </a>
+                    </li>
+                    <li class="css-1tu59u4">
+                        <a href="https://www.youtube.com/figmadesign" target="_blank" rel="noopener noreferrer" class="css-ap1zbb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13" aria-hidden="true" class="css-1chiy0g">
+                                <path d="M15.6 2c.4 1.4.4 4.4.4 4.4s0 3-.4 4.4c-.2.8-.8 1.4-1.5 1.6-1.4.4-6.1.4-6.1.4s-4.7 0-6-.4c-.8-.2-1.4-.8-1.6-1.6C0 9.4 0 6.4 0 6.4S0 3.4.4 2C.6 1.2 1.2.6 1.9.4 3.3 0 8 0 8 0s4.7 0 6 .4c.8.2 1.4.8 1.6 1.6zM6.4 9.2l4.8-2.8-4.8-2.8v5.6z"></path>
+                            </svg>
+                            <span class="css-1vd5jp7">YouTube</span>
+                        </a>
+                    </li>
+                    <li class="css-1tu59u4">
+                        <a href="https://www.instagram.com/figma" target="_blank" rel="noopener noreferrer" class="css-ap1zbb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 449 449" aria-hidden="true" class="css-1chiy0g">
+                                <path d="M224.18 109.6c-63.6 0-114.9 51.3-114.9 114.9 0 63.6 51.3 114.9 114.9 114.9 63.6 0 114.9-51.3 114.9-114.9 0-63.6-51.3-114.9-114.9-114.9zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8a26.8 26.8 0 1 1 26.8-26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1-26.3 26.2-34.4 58-36.2 93.9-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9 26.3 26.2 58 34.4 93.9 36.2 37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zm-47.8 224.5a75.63 75.63 0 0 1-42.6 42.6c-29.5 11.7-99.5 9-132.1 9-32.6 0-102.7 2.6-132.1-9a75.63 75.63 0 0 1-42.6-42.6c-11.7-29.5-9-99.5-9-132.1 0-32.6-2.6-102.7 9-132.1a75.63 75.63 0 0 1 42.6-42.6c29.5-11.7 99.5-9 132.1-9 32.6 0 102.7-2.6 132.1 9a75.63 75.63 0 0 1 42.6 42.6c11.7 29.5 9 99.5 9 132.1 0 32.6 2.7 102.7-9 132.1z"></path>
+                            </svg>
+                            <span class="css-1vd5jp7">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="css-1tu59u4">
+                        <a href="https://www.facebook.com/figmadesign" target="_blank" rel="noopener noreferrer" class="css-ap1zbb">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 448 449" aria-hidden="true" class="css-1chiy0g">
+                                <path d="M448 25.2v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V275h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8V70.8c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4V275h58.4v173.5H24.7C11.1 448.5 0 437.4 0 423.8V25.2C0 11.6 11.1.5 24.7.5h398.5C436.9.5 448 11.6 448 25.2z"></path>
+                            </svg>
+                            <span class="css-1vd5jp7">Facebook</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="css-1wg8xzb">
+                <h2 class="css-90vnmj">Use Cases</h2>
+                <ul class="css-1vp02yi">
+                    <li>
+                        <a class="css-1od6ipz" href="/ui-design-tool/">UI design</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/ux-design-tool/">UX design</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/wireframe-tool/">Wireframing</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/diagramming-tool/">Diagramming</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/brainstorming-tool/">Brainstorming</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/online-whiteboard/">Online whiteboard</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/team-collaboration/">Team collaboration</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/agile-workflows/">Agile workflows</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/strategic-planning/">Strategic planning</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/mind-map/">Mind mapping</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/concept-map/">Concept mapping</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/organizational-chart/">Org charts</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/online-sticky-notes/">Online sticky notes</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/templates/">Templates</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/remote-design/">Remote design</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/agencies/">Agencies</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/education/">Figma for education</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="css-1wg8xzb">
+                <h2 class="css-90vnmj">Explore</h2>
+                <ul class="css-1vp02yi">
+                    <li>
+                        <a class="css-1od6ipz" href="/design/">Design features</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/prototyping/">Prototyping features</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/design-systems/">Design systems features</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/dev-mode/">Development features</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/collaboration/">Collaboration features</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/design-process/">Design process</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam/">FigJam</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/whats-new/">What &#x27;s new</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/release-notes/">Releases</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/pricing/">Pricing</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/enterprise/">Enterprise</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/organization/">Organization</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/professional/">Professional</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/customers/">Customers</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/security/">Security</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/product-integrations/">Integrations</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/contact/">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="css-1wg8xzb">
+                <h2 class="css-90vnmj">Resources</h2>
+                <ul class="css-1vp02yi">
+                    <li>
+                        <a class="css-1od6ipz" href="/blog/">Blog</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/best-practices/">Best practices</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/color-wheel/">Color wheel</a>
+                    </li>
+                    <li>
+                        <a href="https://help.figma.com/hc/en-us" target="_blank" rel="noreferrer" class="css-1od6ipz">Support</a>
+                    </li>
+                    <li>
+                        <a href="/developers" target="_blank" rel="noreferrer" class="css-1od6ipz">Developers</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/resource-library/">Resource library</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/reports/">Reports &amp;Insights</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/webinars/">Webinars</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/downloads/">Downloads</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/careers/">Careers</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/about/">Our story</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/affiliate-program/">Affiliate program</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/partners/">Partners</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/legal/">Legal and Privacy</a>
+                    </li>
+                    <li>
+                        <a href="https://static.figma.com/uploads/160c9cb21d6020c9eacaff67ac1450eb05d48c3b" target="_blank" rel="noreferrer" class="css-1od6ipz">Modern Slavery Statement</a>
+                    </li>
+                    <li>
+                        <a href="https://static.figma.com/uploads/d2a204b5cc4d64ff539fcd445d0ddedab7dc00f6" target="_blank" rel="noreferrer" class="css-1od6ipz">Climate Disclosure Statement</a>
+                    </li>
+                    <li>
+                        <a href="https://status.figma.com/" target="_blank" rel="noreferrer" class="css-1od6ipz">Status</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="css-1wg8xzb">
+                <h2 class="css-90vnmj">Compare</h2>
+                <ul class="css-1vp02yi">
+                    <li>
+                        <a class="css-1od6ipz" href="/figma-vs-sketch/">Sketch</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figma-vs-adobe-xd/">Adobe XD</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figma-vs-invision-studio/">Invision Studio</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figma-vs-framer/">Framer</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/sketch-alternative/">Design on Windows</a>
+                    </li>
+                    <li>
+                        <a class="css-1od6ipz" href="/figjam-vs-miro/">Miro</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="css-1prdzd1">
+                <div class="css-1qp1hdh">
+                    <div class="css-axw7ok">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" aria-hidden="true" class="css-12caxjw">
+                            <rect width="15" height="15" x="0.5" y="0.5" stroke="#000" rx="7.5"></rect>
+                            <path stroke="#000" d="M1 8h14m-4.5 0c0 2.165-.33 4.103-.847 5.481-.259.691-.556 1.216-.86 1.559-.304.343-.573.46-.793.46-.22 0-.49-.117-.794-.46-.304-.343-.6-.868-.86-1.559C5.83 12.103 5.5 10.165 5.5 8s.33-4.103.847-5.481c.259-.691.555-1.216.86-1.559C7.51.617 7.78.5 8 .5c.22 0 .49.117.794.46.303.343.6.868.86 1.559.516 1.378.846 3.316.846 5.481Z"></path>
+                        </svg>
+                        <div class="css-79elbk">
+                            <select aria-label="Choose a language" class="css-mx6wto">
+                                <option value="en" lang="en" class="css-xxr460" selected="">English</option>
+                                <option value="fr" lang="fr" class="css-xxr460">Français</option>
+                                <option value="de" lang="de" class="css-xxr460">Deutsch</option>
+                                <option value="ja" lang="ja" class="css-xxr460">日本語</option>
+                            </select>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 10" aria-hidden="true" class="css-181ih7a">
+                                <path stroke="#000" stroke-width="2" d="m1.5 1.04 7 7 7-7"></path>
+                            </svg>
+                        </div>
+                        <span aria-hidden="true" class="css-digmnm">English</span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
